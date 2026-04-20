@@ -6,11 +6,13 @@ public class GridSpawner : MonoBehaviour
     private GameObject gridItemPrefab;
 
     [SerializeField]
-    private int gridSize = 10;
+    private int gridSizeX = 10;
+    [SerializeField]
+    private int gridSizeY = 10;
 
     void Start()
     {
-        for (int i = 0; i < gridSize*gridSize; i++)
+        for (int i = 0; i < gridSizeX * gridSizeY; i++)
         {
             Instantiate(gridItemPrefab, transform);
         }    
