@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 866913970951334856}
   - component: {fileID: 142063275546294403}
+  - component: {fileID: 1602515570175971838}
   m_Layer: 5
   m_Name: Player
   m_TagString: Untagged
@@ -24,7 +25,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 66170164604571377}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -45,6 +46,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 66170164604571377}
   m_CullTransparentMesh: 1
+--- !u!114 &1602515570175971838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66170164604571377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74bcb6e9e0cd496438878cb7de2d4be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  goEventChannel: {fileID: 11400000, guid: 7b046ce9b5b406c419c33eae187ac00d, type: 2}
 --- !u!1 &5185500274466322567
 GameObject:
   m_ObjectHideFlags: 0

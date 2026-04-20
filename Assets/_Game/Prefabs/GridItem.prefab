@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9197358791727933918}
   - component: {fileID: 5853746348888548847}
   - component: {fileID: 5239216360496107201}
+  - component: {fileID: -3867171542811474968}
   m_Layer: 5
   m_Name: GridItem
   m_TagString: Untagged
@@ -102,3 +103,16 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &-3867171542811474968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7970801312423164196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f70f82994a3813439da5511f1137b19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GridItem
+  goEventChannel: {fileID: 11400000, guid: 7b046ce9b5b406c419c33eae187ac00d, type: 2}
