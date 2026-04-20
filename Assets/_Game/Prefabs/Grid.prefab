@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6546249944625663060}
   - component: {fileID: 5781904769005464620}
   - component: {fileID: 8425574566592537160}
+  - component: {fileID: 4907693526282055091}
   m_Layer: 5
   m_Name: Grid
   m_TagString: Untagged
@@ -117,3 +118,23 @@ MonoBehaviour:
   gridSizeX: 10
   gridSizeY: 6
   playerPrefab: {fileID: 66170164604571377, guid: 4c1e1465779c70c438342ce266f76f45, type: 3}
+--- !u!114 &4907693526282055091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2800207893838744569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6520e8ef3d107c04e89512c996a7093d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoldierSpawner
+  goEventChannel: {fileID: 11400000, guid: c3d4b7e833995f1409aa2e10dce35286, type: 2}
+  gridItems: []
+  soldierPrefab: {fileID: 911810840665668559, guid: f1beb5ec793859843a7bcf147de79df5, type: 3}
+  initSpawnInterval: 1
+  spawnIntervalDecr: 0.01
+  initLifetime: 10
+  lifetimeDecrease: 0.1
+  minAllowedLifetime: 1

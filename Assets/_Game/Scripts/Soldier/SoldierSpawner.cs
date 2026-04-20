@@ -15,14 +15,27 @@ public class SoldierSpawner : MonoBehaviour
     private float initSpawnInterval = 5f;
     
     [SerializeField]
-    private float spawnIntervalIncr = 0.01f;
+    private float spawnIntervalDecr = 0.01f;
+
+    [Header("Soldier Lifetime settings")]
+    [SerializeField]
+    private float initLifetime = 10f;
+    [SerializeField]
+    private float lifetimeDecrease = 0.1f;
+    [SerializeField]
+    private float minAllowedLifetime = 1f;
 
     private float currentSpawnInterval = 0f;
+    private float currentLifetime;
     private float spawnTimer = 0f;
 
     private void Start()
     {
         currentSpawnInterval = initSpawnInterval;
+        currentLifetime = initLifetime;
+        spawnTimer = currentSpawnInterval;
+
+        gridItems = new List<GridItem>(GetComponentsInChildren<GridItem>());
     }
 
     private void Update()
@@ -38,11 +51,30 @@ public class SoldierSpawner : MonoBehaviour
 
     private void SpawnSoldier()
     {
-        int r = Random.Range(0, gridItems.Count - 1);
+        if (gridItems == null || gridItems.Count == 0)
+        {
+            gridItems = new List<GridItem>(GetComponentsInChildren<GridItem>());
+        }
+
+        if (gridItems == null || gridItems.Count == 0) return;
+
+        int r = Random.Range(0, gridItems.Count);
 
         var targetGridItem = gridItems[r];
-        //Instantiate(soldierPrefab, )
 
+        GameObject soldier = Instantiate(soldierPrefab, targetGridItem.transform);
+        SoldierLifetime lifetimeScript = soldier.GetComponent<SoldierLifetime>();
+        if (lifetimeScript == null)
+        {
+            lifetimeScript = soldier.AddComponent<SoldierLifetime>();
+        }
+
+        float lifetime = currentLifetime;
+        lifetimeScript.SetLifetime(lifetime);
+
+        currentSpawnInterval = Mathf.Max(0.1f, currentSpawnInterval - spawnIntervalDecr);
+
+        currentLifetime = Mathf.Max(minAllowedLifetime, currentLifetime - lifetimeDecrease);
     }
 
 }

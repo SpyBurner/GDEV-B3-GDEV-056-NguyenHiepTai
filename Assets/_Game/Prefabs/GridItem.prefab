@@ -116,3 +116,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridItem
   goEventChannel: {fileID: 11400000, guid: 7b046ce9b5b406c419c33eae187ac00d, type: 2}
+  gridItemBroadcastChannel: {fileID: 11400000, guid: c3d4b7e833995f1409aa2e10dce35286, type: 2}
